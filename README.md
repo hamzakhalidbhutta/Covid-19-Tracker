@@ -3,7 +3,7 @@
 ## Deployed on Surge
     http://covid19-tracker-hkbenvision.surge.sh 
 
-## Source code on Github for CI/CD Development
+## Source code on Github for CI/CD
     https://github.com/hamzakhalidbhutta/Covid-19-Tracker
 
 
