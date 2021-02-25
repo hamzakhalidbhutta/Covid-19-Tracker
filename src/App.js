@@ -24,8 +24,10 @@ const App = () => {
   return (
     <div className={styles.container}>
       <h1>Covid19-Tracker </h1>
-      <Cards stats={result.data} />
       <CounteryPicker picker={handleCountriesPicker} />
+      <br />
+      <Cards stats={result.data} country={result.country} />
+       <br />
       <Chart stats={result.data} country={result.country} />
     </div>
   );

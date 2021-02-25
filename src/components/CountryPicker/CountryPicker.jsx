@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { fetchCountriesNames } from "./../../api";
-
-const CountryPicker = ({picker}) => {
+ import { NativeSelect } from "@material-ui/core";
+const CountryPicker = ({ picker }) => {
   const [countriesNames, setCountriesNames] = useState([]);
-
+ 
   useEffect(() => {
     const fetchCountries = async () => {
       const countriesNames = await fetchCountriesNames();
@@ -14,13 +14,23 @@ const CountryPicker = ({picker}) => {
 
   return (
     <div className="counteryPickerContainer">
-      <select name="countriesPicker" onChange={(e)=>{ picker(e.target.value) }} id="countriesPicker">
+      <NativeSelect
+        name="countriesPicker"
+        onChange={(e) => {
+          picker(e.target.value);
+        }}
+        id="countriesPicker"
+      >
+         <option value="all">
+            {"Around the world"}
+          </option>
         {countriesNames.map((v, i) => (
+         
           <option key={i} value={v}>
             {v}
           </option>
         ))}
-      </select>
+      </NativeSelect>
     </div>
   );
 };
