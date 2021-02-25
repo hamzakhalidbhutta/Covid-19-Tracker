@@ -6,14 +6,13 @@
 ## Source code on Github for CI/CD
     https://github.com/hamzakhalidbhutta/Covid-19-Tracker
 
-
 ### Third party dependencies
     1- axios
     2- chart.js
     3- node-sass
     4- react-chartjs-2
     5- material-ui
-    
+    6- Countup
 
 #### API
     1- https://covid19.mathdro.id/api

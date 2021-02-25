@@ -1,4 +1,5 @@
 import React from "react";
+// import { Button } from '@material-ui/core';
 import { Pie, Doughnut } from "react-chartjs-2";
 
 const Cards = ({ stats: { confirmed, recovered, deaths, lastUpdate } }) => {
@@ -31,7 +32,9 @@ const Cards = ({ stats: { confirmed, recovered, deaths, lastUpdate } }) => {
         },
       }}
     />
-  ) : null;
+  ) : (
+    "Loading..."
+  );
 
   const dougnutChart = confirmed ? (
     <Doughnut
@@ -62,10 +65,16 @@ const Cards = ({ stats: { confirmed, recovered, deaths, lastUpdate } }) => {
         },
       }}
     />
-  ) : null;
+  ) : (
+    "Loading..."
+  );
   return (
     <div className="cardsContainer">
+      {/* <Button variant="outlined" color="secondary">
+        Secondary
+      </Button> */}
       {pieChart}
+
       {dougnutChart}
     </div>
   );
